@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="BECAUSE WE TEST SHIT HERE">
+  <meta name="author" content="">
+  
+  <link rel="canonical" href="https://substr8games.github.io/testing-mofo/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="TESTING MOFO">
+  <meta property="og:description" content="BECAUSE WE TEST SHIT HERE">
+  <meta property="og:url" content="https://substr8games.github.io/testing-mofo/">
+  
+  <title>TESTING MOFO</title>
+  <style>
+:root {
+  --background: #e9e4d9;
+  --surface: #f8f5ee;
+  --text: #252729;
+  --muted: #6c6d6f;
+  --accent: #b5481d;
+  --border: #d1c8b8;
+  --code-background: #171a1d;
+  --code-text: #f2f4f5;
+  --body-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --heading-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  --article-width: 780px;
+  --body-size: 19px;
+  --line-height: 1.72;
+  --title-size: clamp(42px, 8vw, 68px);
+  --radius: 2px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: var(--body-size);
+  line-height: var(--line-height);
+  text-rendering: optimizeLegibility;
+  overflow-wrap: break-word;
+}
+a { color: var(--accent); text-decoration-thickness: .08em; text-underline-offset: .15em; }
+a:hover { text-decoration-thickness: .13em; }
+.page { padding: clamp(22px, 6vw, 86px) clamp(14px, 4vw, 42px); }
+.article-shell {
+  width: min(100%, calc(var(--article-width) + clamp(32px, 8vw, 110px)));
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(28px, 7vw, 84px) clamp(20px, 7vw, 70px);
+}
+.article-header { max-width: var(--article-width); margin: 0 auto clamp(45px, 8vw, 86px); text-align: left; }
+.article-kicker { margin: 0 0 18px; color: var(--accent); font: 700 .72rem/1 var(--heading-font); letter-spacing: .17em; text-transform: uppercase; }
+h1.article-title { margin: 0; font-family: var(--heading-font); font-size: var(--title-size); line-height: .98; letter-spacing: -.04em; text-wrap: balance; }
+.article-subtitle { max-width: 48rem; margin: 25px 0 0; color: var(--muted); font-size: clamp(1.08rem, 2.4vw, 1.38rem); line-height: 1.5; text-wrap: balance; }
+.article-meta { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 7px 15px; margin-top: 28px; color: var(--muted); font-size: .82rem; }
+.article-meta span + span::before { content: "·"; margin-right: 15px; color: var(--border); }
+.article-tags { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 7px; margin-top: 20px; }
+.article-tags span { border: 1px solid var(--border); border-radius: 999px; padding: 4px 10px; color: var(--muted); font-size: .72rem; }
+.hero { width: min(100%, calc(var(--article-width) + 190px)); margin: 0 auto clamp(45px, 8vw, 80px); }
+.hero img { display: block; width: 100%; height: auto; max-height: 72vh; object-fit: contain; border-radius: var(--radius); }
+.article-layout { max-width: var(--article-width); margin: 0 auto; }
+.table-of-contents { margin: 0 0 55px; padding: 22px 25px; border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius); background: color-mix(in srgb, var(--surface) 87%, var(--background)); }
+.table-of-contents h2 { margin: 0 0 12px; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+.table-of-contents ol { margin: 0; padding-left: 1.25rem; }
+.table-of-contents ol ol { margin-top: 5px; }
+.table-of-contents li { margin: 5px 0; color: var(--muted); font-size: .88rem; }
+.table-of-contents a { color: inherit; }
+.article-body { max-width: var(--article-width); margin: 0 auto; }
+.article-body > :first-child { margin-top: 0; }
+.article-body > :last-child { margin-bottom: 0; }
+.article-body p { margin: 0 0 1.4em; }
+.article-body h1, .article-body h2, .article-body h3, .article-body h4, .article-body h5, .article-body h6 { font-family: var(--heading-font); line-height: 1.13; letter-spacing: -.025em; scroll-margin-top: 24px; text-wrap: balance; }
+.article-body h1 { font-size: 2.7em; margin: 1.8em 0 .65em; }
+.article-body h2 { font-size: 2.05em; margin: 2.1em 0 .65em; }
+.article-body h3 { font-size: 1.52em; margin: 1.9em 0 .55em; }
+.article-body h4 { font-size: 1.2em; margin: 1.7em 0 .5em; }
+.article-body ul, .article-body ol { padding-left: 1.45em; margin: 0 0 1.4em; }
+.article-body li { margin: .38em 0; }
+.article-body li > ul, .article-body li > ol { margin: .4em 0; }
+.article-body blockquote { margin: 2em 0; padding: .4em 0 .4em 1.3em; border-left: 4px solid var(--accent); color: color-mix(in srgb, var(--text) 76%, var(--muted)); font-size: 1.17em; }
+.article-body blockquote p:last-child { margin-bottom: 0; }
+.article-body hr { height: 1px; border: 0; background: var(--border); margin: 3.4em 0; }
+.article-body img { max-width: 100%; height: auto; border-radius: var(--radius); }
+.article-body figure { margin: 2.4em 0; }
+.article-body figure > img { display: block; margin: 0 auto; }
+.article-body figcaption { margin-top: 9px; color: var(--muted); font-size: .76rem; line-height: 1.4; text-align: center; }
+.article-body code { font-family: var(--code-font); font-size: .88em; }
+.article-body :not(pre) > code { padding: .12em .34em; border: 1px solid var(--border); border-radius: 4px; background: color-mix(in srgb, var(--surface) 70%, var(--background)); }
+.code-shell { margin: 2em 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--code-background); }
+.code-bar { min-height: 38px; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 0 12px; border-bottom: 1px solid color-mix(in srgb, var(--code-text) 15%, transparent); color: color-mix(in srgb, var(--code-text) 62%, transparent); font: 700 .68rem/1 var(--code-font); letter-spacing: .08em; text-transform: uppercase; }
+.code-copy { border: 1px solid color-mix(in srgb, var(--code-text) 25%, transparent); border-radius: 4px; background: transparent; color: inherit; padding: 5px 8px; cursor: pointer; }
+.code-copy:hover { color: var(--code-text); border-color: color-mix(in srgb, var(--code-text) 60%, transparent); }
+.code-shell pre { margin: 0; padding: 20px; overflow-x: auto; color: var(--code-text); font: .82rem/1.65 var(--code-font); tab-size: 2; }
+.table-scroll { overflow-x: auto; margin: 2em 0; border: 1px solid var(--border); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; font-size: .88em; }
+th, td { padding: 11px 13px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+th:last-child, td:last-child { border-right: 0; }
+tr:last-child td { border-bottom: 0; }
+th { background: color-mix(in srgb, var(--surface) 76%, var(--background)); font-family: var(--heading-font); }
+input[type="checkbox"] { accent-color: var(--accent); }
+.article-footer { max-width: var(--article-width); margin: 75px auto 0; padding-top: 25px; border-top: 1px solid var(--border); color: var(--muted); font-size: .82rem; }
+.token.comment, .token.prolog, .token.doctype, .token.cdata { color: #75808a; }
+.token.punctuation { color: #c5cbd0; }
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted { color: #ff7f6e; }
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted { color: #a8db8f; }
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string { color: #e6c47a; }
+.token.atrule, .token.attr-value, .token.keyword { color: #c6a0f6; }
+.token.function, .token.class-name { color: #79c7ff; }
+.token.regex, .token.important, .token.variable { color: #f6b26b; }
+
+@media (max-width: 680px) {
+  .page { padding: 0; }
+  .article-shell { border-left: 0; border-right: 0; border-radius: 0; }
+  .article-meta span + span::before { display: none; }
+}
+</style>
+</head>
+<body>
+  <main class="page">
+    <article class="article-shell">
+      <header class="article-header">
+        
+        <h1 class="article-title">TESTING MOFO</h1>
+        <p class="article-subtitle">BECAUSE WE TEST SHIT HERE</p>
+        <div class="article-meta"><span>1 min read</span></div>
+        
+      </header>
+      
+      <div class="article-layout">
+        
+        <div class="article-body"><h3 id="no-situations">NO SITUATIONS</h3>
+<h3 id="no-exceptions">NO EXCEPTIONS</h3>
+<p>I AM THE TORUS</p>
+</div>
+      </div>
+      
+    </article>
+  </main>
+  <script>
+  document.addEventListener('click', async event => {
+    const button = event.target.closest('.code-copy');
+    if (!button) return;
+    const code = button.closest('.code-shell')?.querySelector('code')?.innerText || '';
+    try { await navigator.clipboard.writeText(code); button.textContent = 'Copied'; setTimeout(() => button.textContent = 'Copy', 1200); } catch {}
+  });
+  </script>
+</body>
+</html>

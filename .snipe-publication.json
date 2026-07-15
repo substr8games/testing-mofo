@@ -1,0 +1,13 @@
+{
+  "format": "snipe-publication",
+  "version": 1,
+  "owner": "substr8games",
+  "repository": "testing-mofo",
+  "projectId": "97a98f13-1d68-4972-96ff-8e4eae9ebf14",
+  "title": "TESTING MOFO",
+  "managedPaths": [
+    ".nojekyll",
+    "index.html"
+  ],
+  "publishedAt": "2026-07-15T01:58:53.194Z"
+}
